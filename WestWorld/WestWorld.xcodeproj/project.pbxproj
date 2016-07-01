@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		903781171D26CDA500707915 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 903781161D26CDA500707915 /* main.cpp */; };
+		903781281D26CE6100707915 /* BaseGameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9037811D1D26CE6100707915 /* BaseGameEntity.cpp */; };
+		903781291D26CE6100707915 /* Miner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 903781201D26CE6100707915 /* Miner.cpp */; };
+		9037812A1D26CE6100707915 /* MinerOwnedStates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 903781221D26CE6100707915 /* MinerOwnedStates.cpp */; };
+		9037812B1D26CE6100707915 /* MyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 903781241D26CE6100707915 /* MyClass.cpp */; };
+		9037812C1D26CE6100707915 /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 903781261D26CE6100707915 /* State.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,17 @@
 /* Begin PBXFileReference section */
 		903781131D26CDA500707915 /* WestWorld */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WestWorld; sourceTree = BUILT_PRODUCTS_DIR; };
 		903781161D26CDA500707915 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9037811D1D26CE6100707915 /* BaseGameEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseGameEntity.cpp; sourceTree = "<group>"; };
+		9037811E1D26CE6100707915 /* BaseGameEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseGameEntity.h; sourceTree = "<group>"; };
+		9037811F1D26CE6100707915 /* Locations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Locations.h; sourceTree = "<group>"; };
+		903781201D26CE6100707915 /* Miner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Miner.cpp; sourceTree = "<group>"; };
+		903781211D26CE6100707915 /* Miner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Miner.h; sourceTree = "<group>"; };
+		903781221D26CE6100707915 /* MinerOwnedStates.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MinerOwnedStates.cpp; sourceTree = "<group>"; };
+		903781231D26CE6100707915 /* MinerOwnedStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinerOwnedStates.h; sourceTree = "<group>"; };
+		903781241D26CE6100707915 /* MyClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MyClass.cpp; sourceTree = "<group>"; };
+		903781251D26CE6100707915 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
+		903781261D26CE6100707915 /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
+		903781271D26CE6100707915 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +73,17 @@
 		903781151D26CDA500707915 /* WestWorld */ = {
 			isa = PBXGroup;
 			children = (
+				9037811D1D26CE6100707915 /* BaseGameEntity.cpp */,
+				9037811E1D26CE6100707915 /* BaseGameEntity.h */,
+				9037811F1D26CE6100707915 /* Locations.h */,
+				903781201D26CE6100707915 /* Miner.cpp */,
+				903781211D26CE6100707915 /* Miner.h */,
+				903781221D26CE6100707915 /* MinerOwnedStates.cpp */,
+				903781231D26CE6100707915 /* MinerOwnedStates.h */,
+				903781241D26CE6100707915 /* MyClass.cpp */,
+				903781251D26CE6100707915 /* MyClass.h */,
+				903781261D26CE6100707915 /* State.cpp */,
+				903781271D26CE6100707915 /* State.h */,
 				903781161D26CDA500707915 /* main.cpp */,
 			);
 			path = WestWorld;
@@ -118,7 +145,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903781291D26CE6100707915 /* Miner.cpp in Sources */,
+				9037812A1D26CE6100707915 /* MinerOwnedStates.cpp in Sources */,
 				903781171D26CDA500707915 /* main.cpp in Sources */,
+				9037812B1D26CE6100707915 /* MyClass.cpp in Sources */,
+				903781281D26CE6100707915 /* BaseGameEntity.cpp in Sources */,
+				9037812C1D26CE6100707915 /* State.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

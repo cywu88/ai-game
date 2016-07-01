@@ -13,11 +13,11 @@
 #include "MinerOwnedStates.h"
 
 
-//EnterMineAndDigForNugget* EnterMineAndDigForNugget::getInstance()
-//{
-//    static EnterMineAndDigForNugget instance;
-//    return &instance;
-//}
+EnterMineAndDigForNugget* EnterMineAndDigForNugget::getInstance()
+{
+    static EnterMineAndDigForNugget instance;
+    return &instance;
+}
 
 void EnterMineAndDigForNugget::Enter(Miner *pMiner)
 {
@@ -31,7 +31,7 @@ void EnterMineAndDigForNugget::Execute(Miner *pMiner)
     
 }
 
-void EnterMineAndDigForNugget::Exit(Minner *pMiner)
+void EnterMineAndDigForNugget::Exit(Miner *pMiner)
 {
     
 }

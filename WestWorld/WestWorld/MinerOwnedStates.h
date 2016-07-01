@@ -24,15 +24,16 @@ private:
 //    EnterMineAndDigForNugget& operator=(const EnterMineAndDigForNugget&);
     
 public:
-//    virtual ~EnterMineAndDigForNugget();
     
-//    static EnterMineAndDigForNugget* getInstance();
+    virtual ~EnterMineAndDigForNugget(){};
+    
+    static EnterMineAndDigForNugget* getInstance();
     
     virtual void Enter(Miner* miner);
     
     virtual void Execute(Miner* miner);
     
-    virtual void Exit(Minner *minner);
+    virtual void Exit(Miner *minner);
 };
 
 class VisitBankAndDepositGold : public State

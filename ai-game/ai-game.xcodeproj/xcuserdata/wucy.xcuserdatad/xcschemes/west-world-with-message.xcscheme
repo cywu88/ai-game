@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "903781121D26CDA500707915"
-               BuildableName = "WestWorld"
-               BlueprintName = "WestWorld"
-               ReferencedContainer = "container:WestWorld.xcodeproj">
+               BlueprintIdentifier = "905748BE1D27FC8A0003ABF0"
+               BuildableName = "west-world-with-message"
+               BlueprintName = "west-world-with-message"
+               ReferencedContainer = "container:ai-game.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "903781121D26CDA500707915"
-            BuildableName = "WestWorld"
-            BlueprintName = "WestWorld"
-            ReferencedContainer = "container:WestWorld.xcodeproj">
+            BlueprintIdentifier = "905748BE1D27FC8A0003ABF0"
+            BuildableName = "west-world-with-message"
+            BlueprintName = "west-world-with-message"
+            ReferencedContainer = "container:ai-game.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "903781121D26CDA500707915"
-            BuildableName = "WestWorld"
-            BlueprintName = "WestWorld"
-            ReferencedContainer = "container:WestWorld.xcodeproj">
+            BlueprintIdentifier = "905748BE1D27FC8A0003ABF0"
+            BuildableName = "west-world-with-message"
+            BlueprintName = "west-world-with-message"
+            ReferencedContainer = "container:ai-game.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "903781121D26CDA500707915"
-            BuildableName = "WestWorld"
-            BlueprintName = "WestWorld"
-            ReferencedContainer = "container:WestWorld.xcodeproj">
+            BlueprintIdentifier = "905748BE1D27FC8A0003ABF0"
+            BuildableName = "west-world-with-message"
+            BlueprintName = "west-world-with-message"
+            ReferencedContainer = "container:ai-game.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

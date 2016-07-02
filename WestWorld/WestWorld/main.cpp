@@ -26,9 +26,9 @@ int main(int argc, const char * argv[]) {
 		Sleep(1000);
     }
 	//PressAnyKeyToContinue();
-    
+#ifdef WIN32
 	char c;
 	c = getchar();
-
+#endif // WIN32
     return 0;
 }

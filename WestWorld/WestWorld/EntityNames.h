@@ -32,4 +32,5 @@ inline std::string GetNameOfEntity(int n)
     }
 }
 
+
 #endif /* EntityNames_h */

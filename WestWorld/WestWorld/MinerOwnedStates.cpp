@@ -7,13 +7,13 @@
 //
 
 #include <iostream>
-
+#include <string>
 #include "MinerOwnedStates.h"
 #include "Locations.h"
 #include "State.h"
 #include "Miner.h"
 #include "EntityNames.h"
-
+#include "Debug.h"
 
 
 using std::cout;
@@ -28,6 +28,7 @@ void EnterMineAndDigForNugget::Enter(Miner *pMiner)
 {
     if (pMiner->Location() != goldmine) {
         cout<<"\n"<<GetNameOfEntity(pMiner->ID())<<":"<<"Walkin 'to the goldmine";
+		 
         pMiner->ChangeLocation(goldmine);
     }
 }

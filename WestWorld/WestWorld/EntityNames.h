@@ -10,6 +10,7 @@
 #define EntityNames_h
 
 #include <string.h>
+
 enum
 {
     ent_Miner_Bob,
@@ -31,6 +32,6 @@ inline std::string GetNameOfEntity(int n)
             break;
     }
 }
-
+ 
 
 #endif /* EntityNames_h */

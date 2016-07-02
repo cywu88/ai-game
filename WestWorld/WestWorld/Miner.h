@@ -16,9 +16,10 @@
 #include "State.h"
 //class State;
 
-
+const int ComfortLevel = 5;
 const int MaxNuggets = 3;
 const int ThirstLevel = 5;
+const int TirednessThreshold = 5;
 
 
 class Miner : public BaseGameEntity{
@@ -35,10 +36,9 @@ private:
     int m_iThirst;
     
     int m_iFatigue;
-    
   
-    
 public:
+
     Miner(int ID);
     
     void Update();
@@ -53,10 +53,14 @@ public:
     void AddToGoldCarried(const int val);
     bool PocketsFull()const{return m_iGoldCarried >= MaxNuggets;}
     
+	bool Fatigued() const;
     void IncreateFatigue(){m_iFatigue += 1;}
     void DecreateFatigue(){m_iFatigue -= 1;}
     
-    
+	int Wealth() const { return m_iMoneyInBank; }
+	void SetWealth(const int val) { m_iMoneyInBank = val; }
+	void AddToWealth(const int val);
+
     
     bool Thirsty() const;
     void BuyAndDrinkAWhiskye(){m_iThirst = 0; m_iMoneyInBank -= 2;}

@@ -112,8 +112,7 @@ void GoHomeAndSleepTilRested::Enter(Miner *pMiner)
 
 void GoHomeAndSleepTilRested::Execute(Miner *pMiner)
 {
-	if (pMiner->Fatigued()) {
-		
+	if (!pMiner->Fatigued()) {
 		LogEvent(pMiner->ID(), ExecuteHome);
 		pMiner->ChangeState(EnterMineAndDigForNugget::getInstance());
 	}
@@ -121,7 +120,6 @@ void GoHomeAndSleepTilRested::Execute(Miner *pMiner)
 		pMiner->DecreateFatigue();
 		LogEvent(pMiner->ID(), ExecuteHome2);
 	}
-	
 }
 
 void GoHomeAndSleepTilRested::Exit(Miner *pMiner)
@@ -129,7 +127,8 @@ void GoHomeAndSleepTilRested::Exit(Miner *pMiner)
 	LogEvent(pMiner->ID(), ExitHome);
 }
 
-//4
+//4.
+
 QuenchThirst* QuenchThirst::getInstance()
 {
     static QuenchThirst instance;

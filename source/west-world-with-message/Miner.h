@@ -13,8 +13,16 @@
 #include "BaseGameEntity.h"
 
 #include "Locations.h"
-#include "State.h"
+
 //class State;
+//#include "State.h"
+
+
+
+#include "../Common/FSM/State.h"
+#include "../Common/FSM/StateMachine.h"
+using namespace FSM;
+#include "../Common/Message/Telegram.h"
 
 const int ComfortLevel = 5;
 const int MaxNuggets = 3;
@@ -22,9 +30,11 @@ const int ThirstLevel = 5;
 const int TirednessThreshold = 5;
 
 
+
 class Miner : public BaseGameEntity{
 private:
-    State* m_pCurrentState;
+//    State* m_pCurrentState;
+    StateMachine<Miner>* m_pStateMachine;
     
     //旷工所处的位置
     location_type m_Location;
@@ -41,9 +51,20 @@ public:
 
     Miner(int ID);
     
-    void Update();
+    ~Miner(){delete m_pStateMachine;}
     
-    void ChangeState(State* pNewState);
+    void Update();
+ 
+//    void ChangeState(State* pNewState);
+    
+    
+// add and change
+    
+    virtual bool HandleMessage(const Telegram& msg);
+ 
+    StateMachine<Miner>* GetFSM() const{return m_pStateMachine;}
+    
+//---no change
     
     location_type Location()const{return m_Location;}
     void ChangeLocation(const location_type loc){m_Location=loc;}

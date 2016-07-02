@@ -10,11 +10,11 @@
 #define MinerOwnedStates_hpp
 
 #include <stdio.h>
-#include "State.h"
+#include "../Common/FSM/State.h"
+using namespace FSM;
 
-class Minner;
-
-class EnterMineAndDigForNugget : public State
+class Miner;
+class EnterMineAndDigForNugget : public State<Miner>
 {
 private:
     EnterMineAndDigForNugget(){};
@@ -34,9 +34,11 @@ public:
     virtual void Execute(Miner* miner);
     
     virtual void Exit(Miner *minner);
+    
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
 
-class VisitBankAndDepositGold : public State
+class VisitBankAndDepositGold : public State<Miner>
 {
 private:
     VisitBankAndDepositGold(){}
@@ -53,10 +55,12 @@ public:
     virtual void Execute(Miner* miner);
     
     virtual void Exit(Miner *minner);
+    
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
 
 
-class GoHomeAndSleepTilRested : public State
+class GoHomeAndSleepTilRested : public State<Miner>
 {
 private:
     GoHomeAndSleepTilRested(){}
@@ -73,10 +77,12 @@ public:
     virtual void Execute(Miner* miner);
     
     virtual void Exit(Miner *minner);
+    
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
 
 
-class QuenchThirst : public State
+class QuenchThirst : public State<Miner>
 {
 private:
     QuenchThirst(){}
@@ -93,7 +99,14 @@ public:
     virtual void Execute(Miner* miner);
     
     virtual void Exit(Miner *minner);
+    
+    virtual bool OnMessage(Miner* agent, const Telegram& msg);
 };
+
+//
+//
+//
+
 
 
 #endif /* MinerOwnedStates_hpp */

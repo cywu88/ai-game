@@ -16,33 +16,37 @@ Miner::Miner(int ID)
 	m_iGoldCarried(0),
 	m_iMoneyInBank(0),
 	m_iThirst(0),
-	m_iFatigue(0),
-	m_pCurrentState(GoHomeAndSleepTilRested::getInstance())
+	m_iFatigue(0)
 {
- 
+    m_pStateMachine = new StateMachine<Miner>(this);
+    m_pStateMachine->SetCurrentState(GoHomeAndSleepTilRested::getInstance());
 }
 
 void Miner::Update(){
 	m_iThirst++;
-	if (m_pCurrentState) {
-		m_pCurrentState->Execute(this); 
+	if (m_pStateMachine) {
+		m_pStateMachine->Update();
 	}
+}
+
+bool Miner::HandleMessage(const Telegram& msg)
+{
+    return m_pStateMachine->HandleMessage(msg);
 }
 
 
 //--------------------------------------------------
 
-void Miner::ChangeState(State* pNewState){
-    
-    if (m_pCurrentState != NULL && pNewState != NULL) {
-        m_pCurrentState->Exit(this);
-        
-        m_pCurrentState = pNewState;
-        
-        m_pCurrentState->Enter(this);
-    }
-    
-}
+//void Miner::ChangeState(State* pNewState){
+//    
+//    if (m_pCurrentState != NULL && pNewState != NULL) {
+//        m_pCurrentState->Exit(this);
+//        
+//        m_pCurrentState = pNewState;
+//        
+//        m_pCurrentState->Enter(this);
+//    }
+//}
 
 //--------------------------------------------------
 

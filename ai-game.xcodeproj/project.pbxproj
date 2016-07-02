@@ -13,13 +13,24 @@
 		905749061D2801540003ABF0 /* MinerOwnedStates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905748FD1D2801540003ABF0 /* MinerOwnedStates.cpp */; };
 		905749071D2801540003ABF0 /* MyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905748FF1D2801540003ABF0 /* MyClass.cpp */; };
 		905749081D2801540003ABF0 /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749011D2801540003ABF0 /* State.cpp */; };
-		9057491A1D2801840003ABF0 /* BaseGameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749091D2801840003ABF0 /* BaseGameEntity.cpp */; };
-		9057491B1D2801840003ABF0 /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9057490C1D2801840003ABF0 /* EntityManager.cpp */; };
-		9057491C1D2801840003ABF0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749101D2801840003ABF0 /* main.cpp */; };
-		9057491D1D2801840003ABF0 /* Miner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749121D2801840003ABF0 /* Miner.cpp */; };
-		9057491E1D2801840003ABF0 /* MinerOwnedStates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749141D2801840003ABF0 /* MinerOwnedStates.cpp */; };
-		9057491F1D2801840003ABF0 /* MyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749161D2801840003ABF0 /* MyClass.cpp */; };
-		905749201D2801840003ABF0 /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749181D2801840003ABF0 /* State.cpp */; };
+		905749241D2805080003ABF0 /* BaseGameEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749091D2801840003ABF0 /* BaseGameEntity.cpp */; };
+		905749251D2805080003ABF0 /* BaseGameEntity.h in Sources */ = {isa = PBXBuildFile; fileRef = 9057490A1D2801840003ABF0 /* BaseGameEntity.h */; };
+		905749261D2805080003ABF0 /* Debug.h in Sources */ = {isa = PBXBuildFile; fileRef = 9057490B1D2801840003ABF0 /* Debug.h */; };
+		905749271D2805080003ABF0 /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9057490C1D2801840003ABF0 /* EntityManager.cpp */; };
+		905749281D2805080003ABF0 /* EntityManager.h in Sources */ = {isa = PBXBuildFile; fileRef = 9057490D1D2801840003ABF0 /* EntityManager.h */; };
+		905749291D2805080003ABF0 /* EntityNames.h in Sources */ = {isa = PBXBuildFile; fileRef = 9057490E1D2801840003ABF0 /* EntityNames.h */; };
+		9057492A1D2805080003ABF0 /* Locations.h in Sources */ = {isa = PBXBuildFile; fileRef = 9057490F1D2801840003ABF0 /* Locations.h */; };
+		9057492B1D2805080003ABF0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749101D2801840003ABF0 /* main.cpp */; };
+		9057492C1D2805080003ABF0 /* MessageType.h in Sources */ = {isa = PBXBuildFile; fileRef = 905749111D2801840003ABF0 /* MessageType.h */; };
+		9057492D1D2805080003ABF0 /* Miner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749121D2801840003ABF0 /* Miner.cpp */; };
+		9057492E1D2805080003ABF0 /* Miner.h in Sources */ = {isa = PBXBuildFile; fileRef = 905749131D2801840003ABF0 /* Miner.h */; };
+		9057492F1D2805080003ABF0 /* MinerOwnedStates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749141D2801840003ABF0 /* MinerOwnedStates.cpp */; };
+		905749301D2805080003ABF0 /* MinerOwnedStates.h in Sources */ = {isa = PBXBuildFile; fileRef = 905749151D2801840003ABF0 /* MinerOwnedStates.h */; };
+		905749311D2805080003ABF0 /* MyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749161D2801840003ABF0 /* MyClass.cpp */; };
+		905749321D2805080003ABF0 /* MyClass.h in Sources */ = {isa = PBXBuildFile; fileRef = 905749171D2801840003ABF0 /* MyClass.h */; };
+		905749331D28050E0003ABF0 /* State.h in Sources */ = {isa = PBXBuildFile; fileRef = 905749231D28048C0003ABF0 /* State.h */; };
+		905749381D2806F60003ABF0 /* MessageDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 905749361D2806F60003ABF0 /* MessageDispatcher.cpp */; };
+		9057493A1D2813220003ABF0 /* Telegram.h in Sources */ = {isa = PBXBuildFile; fileRef = 905749351D28063F0003ABF0 /* Telegram.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,8 +86,11 @@
 		905749151D2801840003ABF0 /* MinerOwnedStates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MinerOwnedStates.h; path = "source/west-world-with-message/MinerOwnedStates.h"; sourceTree = "<group>"; };
 		905749161D2801840003ABF0 /* MyClass.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MyClass.cpp; path = "source/west-world-with-message/MyClass.cpp"; sourceTree = "<group>"; };
 		905749171D2801840003ABF0 /* MyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyClass.h; path = "source/west-world-with-message/MyClass.h"; sourceTree = "<group>"; };
-		905749181D2801840003ABF0 /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = State.cpp; path = "source/west-world-with-message/State.cpp"; sourceTree = "<group>"; };
-		905749191D2801840003ABF0 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = State.h; path = "source/west-world-with-message/State.h"; sourceTree = "<group>"; };
+		905749231D28048C0003ABF0 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = State.h; path = source/Common/FSM/State.h; sourceTree = "<group>"; };
+		905749351D28063F0003ABF0 /* Telegram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Telegram.h; path = source/Common/Message/Telegram.h; sourceTree = "<group>"; };
+		905749361D2806F60003ABF0 /* MessageDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MessageDispatcher.cpp; path = source/Common/Message/MessageDispatcher.cpp; sourceTree = "<group>"; };
+		905749371D2806F60003ABF0 /* MessageDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageDispatcher.h; path = source/Common/Message/MessageDispatcher.h; sourceTree = "<group>"; };
+		905749391D280B580003ABF0 /* StateMachine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StateMachine.h; path = source/Common/FSM/StateMachine.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +116,7 @@
 			children = (
 				903781151D26CDA500707915 /* west-world */,
 				90EA42421D27FB79008DC7C5 /* west-world-with-message */,
-				905748F41D27FD490003ABF0 /* common */,
+				905748F41D27FD490003ABF0 /* Common */,
 				903781141D26CDA500707915 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -138,11 +152,32 @@
 			path = WestWorld;
 			sourceTree = "<group>";
 		};
-		905748F41D27FD490003ABF0 /* common */ = {
+		905748F41D27FD490003ABF0 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				905749341D2805E30003ABF0 /* Message */,
+				905749221D28044D0003ABF0 /* FSM */,
 			);
-			name = common;
+			name = Common;
+			sourceTree = "<group>";
+		};
+		905749221D28044D0003ABF0 /* FSM */ = {
+			isa = PBXGroup;
+			children = (
+				905749231D28048C0003ABF0 /* State.h */,
+				905749391D280B580003ABF0 /* StateMachine.h */,
+			);
+			name = FSM;
+			sourceTree = "<group>";
+		};
+		905749341D2805E30003ABF0 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				905749351D28063F0003ABF0 /* Telegram.h */,
+				905749361D2806F60003ABF0 /* MessageDispatcher.cpp */,
+				905749371D2806F60003ABF0 /* MessageDispatcher.h */,
+			);
+			name = Message;
 			sourceTree = "<group>";
 		};
 		90EA42421D27FB79008DC7C5 /* west-world-with-message */ = {
@@ -163,8 +198,6 @@
 				905749151D2801840003ABF0 /* MinerOwnedStates.h */,
 				905749161D2801840003ABF0 /* MyClass.cpp */,
 				905749171D2801840003ABF0 /* MyClass.h */,
-				905749181D2801840003ABF0 /* State.cpp */,
-				905749191D2801840003ABF0 /* State.h */,
 			);
 			name = "west-world-with-message";
 			sourceTree = "<group>";
@@ -256,13 +289,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9057491B1D2801840003ABF0 /* EntityManager.cpp in Sources */,
-				9057491D1D2801840003ABF0 /* Miner.cpp in Sources */,
-				9057491A1D2801840003ABF0 /* BaseGameEntity.cpp in Sources */,
-				9057491C1D2801840003ABF0 /* main.cpp in Sources */,
-				905749201D2801840003ABF0 /* State.cpp in Sources */,
-				9057491F1D2801840003ABF0 /* MyClass.cpp in Sources */,
-				9057491E1D2801840003ABF0 /* MinerOwnedStates.cpp in Sources */,
+				9057493A1D2813220003ABF0 /* Telegram.h in Sources */,
+				905749331D28050E0003ABF0 /* State.h in Sources */,
+				905749241D2805080003ABF0 /* BaseGameEntity.cpp in Sources */,
+				905749251D2805080003ABF0 /* BaseGameEntity.h in Sources */,
+				905749261D2805080003ABF0 /* Debug.h in Sources */,
+				905749271D2805080003ABF0 /* EntityManager.cpp in Sources */,
+				905749281D2805080003ABF0 /* EntityManager.h in Sources */,
+				905749291D2805080003ABF0 /* EntityNames.h in Sources */,
+				9057492A1D2805080003ABF0 /* Locations.h in Sources */,
+				9057492B1D2805080003ABF0 /* main.cpp in Sources */,
+				9057492C1D2805080003ABF0 /* MessageType.h in Sources */,
+				905749381D2806F60003ABF0 /* MessageDispatcher.cpp in Sources */,
+				9057492D1D2805080003ABF0 /* Miner.cpp in Sources */,
+				9057492E1D2805080003ABF0 /* Miner.h in Sources */,
+				9057492F1D2805080003ABF0 /* MinerOwnedStates.cpp in Sources */,
+				905749301D2805080003ABF0 /* MinerOwnedStates.h in Sources */,
+				905749311D2805080003ABF0 /* MyClass.cpp in Sources */,
+				905749321D2805080003ABF0 /* MyClass.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

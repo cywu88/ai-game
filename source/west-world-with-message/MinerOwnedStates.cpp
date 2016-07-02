@@ -40,11 +40,11 @@ void EnterMineAndDigForNugget::Execute(Miner *pMiner)
 	LogEvent(pMiner->ID(), ExecuteNuggent);
 
     if (pMiner->PocketsFull()) {
-        pMiner->ChangeState(VisitBankAndDepositGold::getInstance());
+        pMiner->GetFSM()->ChangeState(VisitBankAndDepositGold::getInstance());
     }
     
     if (pMiner->Thirsty()) {
-        pMiner->ChangeState(QuenchThirst::getInstance());
+        pMiner->GetFSM()->ChangeState(QuenchThirst::getInstance());
     }
 }
 
@@ -53,6 +53,13 @@ void EnterMineAndDigForNugget::Exit(Miner *pMiner)
 	//SetTextColor(FOREGROUND_RED | FOREGROUND_INTENSITY);
 	LogEvent(pMiner->ID(), ExitNugget);
 }
+
+bool EnterMineAndDigForNugget::OnMessage(Miner* pMiner, const Telegram& msg)
+{
+    //send msg to global message handler
+    return false;
+}
+
 
 //.2
 
@@ -82,16 +89,22 @@ void VisitBankAndDepositGold::Execute(Miner *pMiner)
 
 		LogEvent(pMiner->ID(), ExecuteBank2);
 
-		pMiner->ChangeState(GoHomeAndSleepTilRested::getInstance());
+		pMiner->GetFSM()->ChangeState(GoHomeAndSleepTilRested::getInstance());
 	}
 	else {
-		pMiner->ChangeState(EnterMineAndDigForNugget::getInstance());
+		pMiner->GetFSM()->ChangeState(EnterMineAndDigForNugget::getInstance());
 	}
 }
 
 void VisitBankAndDepositGold::Exit(Miner *pMiner)
 {
 	LogEvent(pMiner->ID(), ExitBank);
+}
+
+bool VisitBankAndDepositGold::OnMessage(Miner* pMiner, const Telegram& msg)
+{
+    //send msg to global message handler
+    return false;
 }
 
 //.3
@@ -114,7 +127,7 @@ void GoHomeAndSleepTilRested::Execute(Miner *pMiner)
 {
 	if (!pMiner->Fatigued()) {
 		LogEvent(pMiner->ID(), ExecuteHome);
-		pMiner->ChangeState(EnterMineAndDigForNugget::getInstance());
+		pMiner->GetFSM()->ChangeState(EnterMineAndDigForNugget::getInstance());
 	}
 	else {
 		pMiner->DecreateFatigue();
@@ -125,6 +138,26 @@ void GoHomeAndSleepTilRested::Execute(Miner *pMiner)
 void GoHomeAndSleepTilRested::Exit(Miner *pMiner)
 {
 	LogEvent(pMiner->ID(), ExitHome);
+}
+
+bool GoHomeAndSleepTilRested::OnMessage(Miner* pMiner, const Telegram& msg)
+{
+//    switch(msg.Msg)
+//    {
+//        case Msg_StewReady:
+//            
+////            cout << "\nMessage handled by " << GetNameOfEntity(pMiner->ID())
+////            << " at time: " << Clock->GetCurrentTime();
+//            
+//            LogEvent(pMiner->ID(), ": Okay Hun, ahm a comin'!");
+//         
+//            pMiner->GetFSM()->ChangeState(EatStew::Instance());
+//            
+//            return true;
+//            
+//    }//end switch
+    
+    return false; //send message to global message handler
 }
 
 //4.
@@ -151,7 +184,7 @@ void QuenchThirst::Execute(Miner *pMiner)
     {
 		pMiner->BuyAndDrinkAWhiskye();
 		LogEvent(pMiner->ID(), ExecuteThirst);
-		pMiner->ChangeState(EnterMineAndDigForNugget::getInstance());
+		pMiner->GetFSM()->ChangeState(EnterMineAndDigForNugget::getInstance());
 	}
 	else {
 		LogEvent(pMiner->ID(), ExecuteThirst2);
@@ -161,5 +194,11 @@ void QuenchThirst::Execute(Miner *pMiner)
 void QuenchThirst::Exit(Miner *pMiner)
 {
 	LogEvent(pMiner->ID(), ExitThirst);
+}
+
+bool QuenchThirst::OnMessage(Miner* pMiner, const Telegram& msg)
+{
+    //send msg to global message handler
+    return false;
 }
 

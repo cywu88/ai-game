@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 
+#include "Telegram.h"
+
 class BaseGameEntity{
 private:
     int m_ID;
@@ -29,6 +31,9 @@ public:
     virtual void Update() = 0;
     
     int ID() const{return m_ID;}
+    
+    
+    virtual bool HandleMessage(const Telegram& msg) = 0;
 };
 
 

@@ -5,7 +5,13 @@
 //  Created by wucy on 16/7/1.
 //  Copyright © 2016年 wucy. All rights reserved.
 //
+
+
+#ifdef WIN32
 #include <windows.h>
+#endif
+
+
 #include <iostream>
 #include "MyClass.h"
 
@@ -23,12 +29,14 @@ int main(int argc, const char * argv[]) {
 	for (int i = 0; i < 20;i++)
     {
 		miner.Update();
-		Sleep(1000);
-    }
-	//PressAnyKeyToContinue();
 #ifdef WIN32
-	char c;
-	c = getchar();
-#endif // WIN32
+		Sleep(1000);
+#else
+        sleep(1);
+#endif
+
+    }
+    char c;
+    c = getchar();
     return 0;
 }

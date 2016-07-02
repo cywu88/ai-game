@@ -13,6 +13,7 @@
 		9037812A1D26CE6100707915 /* MinerOwnedStates.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 903781221D26CE6100707915 /* MinerOwnedStates.cpp */; };
 		9037812B1D26CE6100707915 /* MyClass.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 903781241D26CE6100707915 /* MyClass.cpp */; };
 		9037812C1D26CE6100707915 /* State.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 903781261D26CE6100707915 /* State.cpp */; };
+		90EA420B1D27D536008DC7C5 /* EntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 90EA42081D27D536008DC7C5 /* EntityManager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,10 @@
 		903781261D26CE6100707915 /* State.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = State.cpp; sourceTree = "<group>"; };
 		903781271D26CE6100707915 /* State.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = State.h; sourceTree = "<group>"; };
 		9063FFE81D273B87000BDEC6 /* EntityNames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntityNames.h; sourceTree = "<group>"; };
+		90EA42071D27D536008DC7C5 /* Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Debug.h; sourceTree = "<group>"; };
+		90EA42081D27D536008DC7C5 /* EntityManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EntityManager.cpp; sourceTree = "<group>"; };
+		90EA42091D27D536008DC7C5 /* EntityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityManager.h; sourceTree = "<group>"; };
+		90EA420A1D27D536008DC7C5 /* MessageType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageType.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,10 @@
 		903781151D26CDA500707915 /* WestWorld */ = {
 			isa = PBXGroup;
 			children = (
+				90EA42071D27D536008DC7C5 /* Debug.h */,
+				90EA42081D27D536008DC7C5 /* EntityManager.cpp */,
+				90EA42091D27D536008DC7C5 /* EntityManager.h */,
+				90EA420A1D27D536008DC7C5 /* MessageType.h */,
 				9037811D1D26CE6100707915 /* BaseGameEntity.cpp */,
 				9037811E1D26CE6100707915 /* BaseGameEntity.h */,
 				9037811F1D26CE6100707915 /* Locations.h */,
@@ -152,6 +161,7 @@
 				903781171D26CDA500707915 /* main.cpp in Sources */,
 				9037812B1D26CE6100707915 /* MyClass.cpp in Sources */,
 				903781281D26CE6100707915 /* BaseGameEntity.cpp in Sources */,
+				90EA420B1D27D536008DC7C5 /* EntityManager.cpp in Sources */,
 				9037812C1D26CE6100707915 /* State.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

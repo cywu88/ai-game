@@ -29,3 +29,18 @@ void Miner::ChangeState(State* pNewState){
     }
     
 }
+
+void Miner::AddToGoldCarried(const int val){
+    m_iGoldCarried += val;
+    if (m_iGoldCarried < 0) {
+        m_iGoldCarried = 0;
+    }
+}
+
+
+bool Miner::Thirsty()const{
+    if (m_iThirst >= ThirstLevel) {
+        return true;
+    }
+    return false;
+}

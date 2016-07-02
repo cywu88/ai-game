@@ -46,13 +46,13 @@ private:
 //    VisitBankAndDepositGold& operator=(const VisitBankAndDepositGold&);
     
 public:
-//    static VisitBankAndDepositGold* getInstance();
+    static VisitBankAndDepositGold* getInstance();
     
     virtual void Enter(Miner* miner);
     
     virtual void Execute(Miner* miner);
     
-    virtual void Exit(Minner *minner);
+    virtual void Exit(Miner *minner);
 };
 
 
@@ -66,13 +66,13 @@ private:
 //    GoHomeAndSleepTilRested& operator=(const GoHomeAndSleepTilRested&);
     
 public:
-//    static GoHomeAndSleepTilRested* getInstance();
+    static GoHomeAndSleepTilRested* getInstance();
     
     virtual void Enter(Miner* miner);
     
     virtual void Execute(Miner* miner);
     
-    virtual void Exit(Minner *minner);
+    virtual void Exit(Miner *minner);
 };
 
 
@@ -86,13 +86,13 @@ private:
 //    QuenchThirst& operator=(const QuenchThirst&);
     
 public:
-//    static QuenchThirst* getInstance();
+    static QuenchThirst* getInstance();
     
     virtual void Enter(Miner* miner);
     
     virtual void Execute(Miner* miner);
     
-    virtual void Exit(Minner *minner);
+    virtual void Exit(Miner *minner);
 };
 
 

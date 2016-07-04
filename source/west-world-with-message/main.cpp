@@ -54,7 +54,11 @@ int main(int argc, const char * argv[]) {
 		//dispatch any delayed messages
 		Dispatch->DispatchDelayedMessages();
 
-		Sleep(800);
+#ifdef WIN32
+		Sleep(1000);
+#else
+		sleep(1);
+#endif
 	}
 
 	//tidy up

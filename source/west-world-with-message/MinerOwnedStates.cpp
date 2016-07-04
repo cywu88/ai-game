@@ -10,7 +10,7 @@
 #include <string>
 #include "MinerOwnedStates.h"
 #include "Locations.h"
-#include "State.h"
+#include "./FSM/State.h"
 #include "Miner.h"
 #include "EntityNames.h"
 #include "Debug.h"

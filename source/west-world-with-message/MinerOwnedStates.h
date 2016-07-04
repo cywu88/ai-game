@@ -10,7 +10,7 @@
 #define MinerOwnedStates_hpp
 
 #include <stdio.h>
-#include "../Common/FSM/State.h"
+#include "./FSM/State.h"
 using namespace FSM;
 
 class Miner;

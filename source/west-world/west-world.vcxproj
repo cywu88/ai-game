@@ -18,11 +18,30 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseGameEntity.h" />
+    <ClInclude Include="Debug.h" />
+    <ClInclude Include="EntityNames.h" />
+    <ClInclude Include="Locations.h" />
+    <ClInclude Include="Miner.h" />
+    <ClInclude Include="MinerOwnedStates.h" />
+    <ClInclude Include="MyClass.h" />
+    <ClInclude Include="State.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseGameEntity.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Miner.cpp" />
+    <ClCompile Include="MinerOwnedStates.cpp" />
+    <ClCompile Include="MyClass.cpp" />
+    <ClCompile Include="State.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{472A20E9-22CC-44AC-A75A-5FC4989200F6}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>WestWorld</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>west-game</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -141,27 +160,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="BaseGameEntity.cpp" />
-    <ClCompile Include="EntityManager.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Miner.cpp" />
-    <ClCompile Include="MinerOwnedStates.cpp" />
-    <ClCompile Include="MyClass.cpp" />
-    <ClCompile Include="State.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="BaseGameEntity.h" />
-    <ClInclude Include="Debug.h" />
-    <ClInclude Include="EntityManager.h" />
-    <ClInclude Include="EntityNames.h" />
-    <ClInclude Include="Locations.h" />
-    <ClInclude Include="MessageType.h" />
-    <ClInclude Include="Miner.h" />
-    <ClInclude Include="MinerOwnedStates.h" />
-    <ClInclude Include="MyClass.h" />
-    <ClInclude Include="State.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

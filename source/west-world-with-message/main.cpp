@@ -24,7 +24,8 @@ int main(int argc, const char * argv[]) {
     
     std::cout << "west-world-with-message ing\n";
  
-
+	char c;
+	c = getchar();
  
     return 0;
 }

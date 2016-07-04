@@ -6,7 +6,7 @@
 //  Copyright © 2016年 wucy. All rights reserved.
 //
 
-#include "MinersWift.h"
+#include "MinersWife.h"
 
 bool MinersWife::HandleMessage(const Telegram& msg)
 {

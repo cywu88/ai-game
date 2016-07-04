@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FSM">
+      <UniqueIdentifier>{8778f7fc-12d1-4eb0-8913-e4e4b31b3aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Message">
+      <UniqueIdentifier>{46035bb0-faa4-4841-b488-11a542b4a762}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FSM\State.h">
+      <Filter>FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="FSM\StateMachine.h">
+      <Filter>FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="Message\MessageDispatcher.h">
+      <Filter>Message</Filter>
+    </ClInclude>
+    <ClInclude Include="Message\Telegram.h">
+      <Filter>Message</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Message\MessageDispatcher.cpp">
+      <Filter>Message</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -12,10 +12,12 @@
 #include <stdio.h>
 #include "BaseGameEntity.h"
 
-#include "../Common/FSM/State.h"
-#include "../Common/FSM/StateMachine.h"
+#include "./Message/Telegram.h"
+#include "./FSM/State.h"
+#include "./FSM/StateMachine.h"
 using namespace FSM;
-#include "../Common/Message/Telegram.h"
+
+
 
 #include "Locations.h"
 

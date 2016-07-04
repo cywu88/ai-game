@@ -6,4 +6,4 @@
 //  Copyright © 2016年 wucy. All rights reserved.
 //
 
-#include "MinersWifeOwnerStates.hpp"
+#include "MinersWifeOwnerStates.h"

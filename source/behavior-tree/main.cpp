@@ -1,31 +1,180 @@
-//
-//  main.cpp
-//  WestWorld
-//
-//  Created by wucy on 16/7/1.
-//  Copyright Â© 2016å¹´ wucy. All rights reserved.
+// behavior-tree.cpp : ¶¨ÒåÓ¦ÓÃ³ÌÐòµÄÈë¿Úµã¡£
 //
 
-#ifdef WIN32
-#include <windows.h>
-#endif
+#include "stdafx.h"
+#include "main.h"
 
-#include <iostream>
+#define MAX_LOADSTRING 100
 
-int main(int argc, const char * argv[]) {
-    std::cout << "behavior tree ing\n";
- 
-	for (int i = 0; i < 20;i++)
+// È«¾Ö±äÁ¿: 
+HINSTANCE hInst;                                // µ±Ç°ÊµÀý
+WCHAR szTitle[MAX_LOADSTRING];                  // ±êÌâÀ¸ÎÄ±¾
+WCHAR szWindowClass[MAX_LOADSTRING];            // Ö÷´°¿ÚÀàÃû
+
+// ´Ë´úÂëÄ£¿éÖÐ°üº¬µÄº¯ÊýµÄÇ°ÏòÉùÃ÷: 
+ATOM                MyRegisterClass(HINSTANCE hInstance);
+BOOL                InitInstance(HINSTANCE, int);
+LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
+INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
+
+int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
+                     _In_opt_ HINSTANCE hPrevInstance,
+                     _In_ LPWSTR    lpCmdLine,
+                     _In_ int       nCmdShow)
+{
+    UNREFERENCED_PARAMETER(hPrevInstance);
+    UNREFERENCED_PARAMETER(lpCmdLine);
+
+    // TODO: ÔÚ´Ë·ÅÖÃ´úÂë¡£
+
+    // ³õÊ¼»¯È«¾Ö×Ö·û´®
+    LoadStringW(hInstance, IDS_APP_TITLE, szTitle, MAX_LOADSTRING);
+    LoadStringW(hInstance, IDC_BEHAVIORTREE, szWindowClass, MAX_LOADSTRING);
+    MyRegisterClass(hInstance);
+
+    // Ö´ÐÐÓ¦ÓÃ³ÌÐò³õÊ¼»¯: 
+    if (!InitInstance (hInstance, nCmdShow))
     {
-		 
-#ifdef WIN32
-		Sleep(1000);
-#else
-        sleep(1);
-#endif
-
+        return FALSE;
     }
-    char c;
-    c = getchar();
+
+    HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_BEHAVIORTREE));
+
+    MSG msg;
+
+    // Ö÷ÏûÏ¢Ñ­»·: 
+    while (GetMessage(&msg, nullptr, 0, 0))
+    {
+        if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+        {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+        }
+    }
+
+    return (int) msg.wParam;
+}
+
+
+
+//
+//  º¯Êý: MyRegisterClass()
+//
+//  Ä¿µÄ: ×¢²á´°¿ÚÀà¡£
+//
+ATOM MyRegisterClass(HINSTANCE hInstance)
+{
+    WNDCLASSEXW wcex;
+
+    wcex.cbSize = sizeof(WNDCLASSEX);
+
+    wcex.style          = CS_HREDRAW | CS_VREDRAW;
+    wcex.lpfnWndProc    = WndProc;
+    wcex.cbClsExtra     = 0;
+    wcex.cbWndExtra     = 0;
+    wcex.hInstance      = hInstance;
+    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_BEHAVIORTREE));
+    wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
+    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW+1);
+    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_BEHAVIORTREE);
+    wcex.lpszClassName  = szWindowClass;
+    wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
+
+    return RegisterClassExW(&wcex);
+}
+
+//
+//   º¯Êý: InitInstance(HINSTANCE, int)
+//
+//   Ä¿µÄ: ±£´æÊµÀý¾ä±ú²¢´´½¨Ö÷´°¿Ú
+//
+//   ×¢ÊÍ: 
+//
+//        ÔÚ´Ëº¯ÊýÖÐ£¬ÎÒÃÇÔÚÈ«¾Ö±äÁ¿ÖÐ±£´æÊµÀý¾ä±ú²¢
+//        ´´½¨ºÍÏÔÊ¾Ö÷³ÌÐò´°¿Ú¡£
+//
+BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
+{
+   hInst = hInstance; // ½«ÊµÀý¾ä±ú´æ´¢ÔÚÈ«¾Ö±äÁ¿ÖÐ
+
+   HWND hWnd = CreateWindowW(szWindowClass, szTitle, WS_OVERLAPPEDWINDOW,
+      CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
+
+   if (!hWnd)
+   {
+      return FALSE;
+   }
+
+   ShowWindow(hWnd, nCmdShow);
+   UpdateWindow(hWnd);
+
+   return TRUE;
+}
+
+//
+//  º¯Êý: WndProc(HWND, UINT, WPARAM, LPARAM)
+//
+//  Ä¿µÄ:    ´¦ÀíÖ÷´°¿ÚµÄÏûÏ¢¡£
+//
+//  WM_COMMAND  - ´¦ÀíÓ¦ÓÃ³ÌÐò²Ëµ¥
+//  WM_PAINT    - »æÖÆÖ÷´°¿Ú
+//  WM_DESTROY  - ·¢ËÍÍË³öÏûÏ¢²¢·µ»Ø
+//
+//
+LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    switch (message)
+    {
+    case WM_COMMAND:
+        {
+            int wmId = LOWORD(wParam);
+            // ·ÖÎö²Ëµ¥Ñ¡Ôñ: 
+            switch (wmId)
+            {
+            case IDM_ABOUT:
+                DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+                break;
+            case IDM_EXIT:
+                DestroyWindow(hWnd);
+                break;
+            default:
+                return DefWindowProc(hWnd, message, wParam, lParam);
+            }
+        }
+        break;
+    case WM_PAINT:
+        {
+            PAINTSTRUCT ps;
+            HDC hdc = BeginPaint(hWnd, &ps);
+            // TODO: ÔÚ´Ë´¦Ìí¼ÓÊ¹ÓÃ hdc µÄÈÎºÎ»æÍ¼´úÂë...
+            EndPaint(hWnd, &ps);
+        }
+        break;
+    case WM_DESTROY:
+        PostQuitMessage(0);
+        break;
+    default:
+        return DefWindowProc(hWnd, message, wParam, lParam);
+    }
     return 0;
+}
+
+// ¡°¹ØÓÚ¡±¿òµÄÏûÏ¢´¦Àí³ÌÐò¡£
+INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    UNREFERENCED_PARAMETER(lParam);
+    switch (message)
+    {
+    case WM_INITDIALOG:
+        return (INT_PTR)TRUE;
+
+    case WM_COMMAND:
+        if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
+        {
+            EndDialog(hDlg, LOWORD(wParam));
+            return (INT_PTR)TRUE;
+        }
+        break;
+    }
+    return (INT_PTR)FALSE;
 }

@@ -16,15 +16,23 @@
 
 class BaseGameEntity;
 
+const double SEND_MSG_IMMEDIATELY = 0.0f;
+const int   NO_ADDITIONAL_INFO = 0;
+
+
+#define Dispatch MessageDispatcher::getInstance()
+
+
 class MessageDispatcher
 {
 private:
     std::set<Telegram> PriorityQ;
-    
-    void Discharge(BaseGameEntity* pReceiver,const Telegram& msg);
-    
-    
-    MessageDispatcher(){}
+
+private:
+	MessageDispatcher() {}
+
+	void Discharge(BaseGameEntity* pReceiver, const Telegram& msg);
+
 public:
     static MessageDispatcher* getInstance();
     

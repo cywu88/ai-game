@@ -14,6 +14,7 @@
 
 class Telegram
 {
+public:
     int Sender;
     
     int Receiver;

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 
 #include <iostream>
@@ -9,6 +9,8 @@
 
 using namespace std;
 
+
+//FSM Meesage
 const std::string EnterNugget  = "Walkin 'to the goldmine";
 const std::string ExecuteNuggent = "Pickin'up a nuggent";
 const std::string ExitNugget = "Ah'm leavin' the goldmine with mah pockets full o' sweet gold";
@@ -31,6 +33,10 @@ const std::string ExecuteThirst2 = "\nERROR!\nERROR!\nERROR!";
 const std::string ExitThirst = "Leaving the saloon, feelin' good";
 
 
+//Debug Message
+
+
+
 static string intToString(int value) {
 	char c[8];
 	sprintf(c, "%05X", value);
@@ -47,5 +53,12 @@ static void LogEvent(int userId,std::string userEvent) {
 static void LogEvent(int userId, std::string userEvent,int value) {
 	string userName = GetNameOfEntity(userId);
 	std::string message = "\n" + userName + ":" + userEvent + intToString(value);
+	std::cout << message << endl;
+}
+
+static void LogEvent(std::string userEvent1,int userId, std::string userEvent2) {
+
+	string userName = GetNameOfEntity(userId);
+	std::string message = "\n" + userEvent1 + userName + ":" + userEvent2;
 	std::cout << message << endl;
 }

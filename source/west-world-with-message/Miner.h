@@ -19,16 +19,15 @@
 
 
 
-#include "../Common/FSM/State.h"
-#include "../Common/FSM/StateMachine.h"
+#include "./FSM/State.h"
+#include "./FSM/StateMachine.h"
 using namespace FSM;
-#include "../Common/Message/Telegram.h"
+#include "./Message/Telegram.h"
 
 const int ComfortLevel = 5;
 const int MaxNuggets = 3;
 const int ThirstLevel = 5;
 const int TirednessThreshold = 5;
-
 
 
 class Miner : public BaseGameEntity{

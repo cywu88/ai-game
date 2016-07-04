@@ -13,6 +13,7 @@ class Telegram;
 
 namespace FSM
 {
+
 template <class entity_type>
 class State
 {

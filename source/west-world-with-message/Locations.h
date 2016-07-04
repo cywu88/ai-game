@@ -17,7 +17,4 @@ enum location_type
     saloon
 };
 
-
-
-
 #endif /* Locations_h */

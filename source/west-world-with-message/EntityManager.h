@@ -4,6 +4,7 @@
 
 #include "BaseGameEntity.h"
 
+#define EntityMgr EntityManager::getInstance()
 
 class EntityManager
 {
@@ -13,7 +14,6 @@ private:
 
 private:
 	EntityMap m_EntityMap;
-
 
 	EntityManager() {}
  

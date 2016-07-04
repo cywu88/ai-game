@@ -17,7 +17,8 @@
 #include "./FSM/StateMachine.h"
 using namespace FSM;
 
-
+#include "MinersWifeOwnedStates.h"
+		  
 
 #include "Locations.h"
 
@@ -38,9 +39,12 @@ public:
     BaseGameEntity(id)
     {
         m_pStateMachine = new StateMachine<MinersWife>(this);
-        //        m_pStateMachine = SetCurrentState(D)
+       
+		m_pStateMachine->SetCurrentState(DoHouseWork::getInstance());
+
+		m_pStateMachine->SetGlobalState(WifesGlobalState::getInstance());
     }
-    
+ 
     ~MinersWife()
     {
         delete m_pStateMachine;
@@ -55,7 +59,6 @@ public:
     location_type Location() const{return m_Location;}
     
     void ChangeLocation(location_type loc){m_Location = loc;}
-    
     bool Cooking()const{return m_bCooking;}
     void SetCooking(bool val){m_bCooking = val;}
     

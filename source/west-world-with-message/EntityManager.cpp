@@ -9,7 +9,7 @@ EntityManager* EntityManager::getInstance()
 
 void EntityManager::RegisterEntity(BaseGameEntity* NewEntity)
 {
-
+	m_EntityMap.insert(std::make_pair(NewEntity->ID(), NewEntity));
 }
 
 BaseGameEntity* EntityManager::GetEntityFromID(int id) const
@@ -25,7 +25,7 @@ BaseGameEntity* EntityManager::GetEntityFromID(int id) const
 
 void EntityManager::RemoveEntity(BaseGameEntity* pEntity)
 {
-
+	m_EntityMap.erase(m_EntityMap.find(pEntity->ID()));
 }
 
 

@@ -32,8 +32,10 @@
     <ClInclude Include="Miner.h" />
     <ClInclude Include="MinerOwnedStates.h" />
     <ClInclude Include="MinersWife.h" />
-    <ClInclude Include="MinersWifeOwnerStates.h" />
-    <ClInclude Include="MyClass.h" />
+    <ClInclude Include="MinersWifeOwnedStates.h" />
+    <ClInclude Include="misc\ConsoleUtils.h" />
+    <ClInclude Include="misc\utils.h" />
+    <ClInclude Include="Time\CrudeTimer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BaseGameEntity.cpp" />
@@ -43,8 +45,8 @@
     <ClCompile Include="Miner.cpp" />
     <ClCompile Include="MinerOwnedStates.cpp" />
     <ClCompile Include="MinersWife.cpp" />
-    <ClCompile Include="MinersWifeOwnerStates.cpp" />
-    <ClCompile Include="MyClass.cpp" />
+    <ClCompile Include="MinersWifeOwnedStates.cpp" />
+    <ClCompile Include="Time\CrudeTimer.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D6283109-34DB-41C9-8F10-6D0F399E06A2}</ProjectGuid>

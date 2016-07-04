@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-#include "./Message/Telegram.h"
+#include "Message/Telegram.h"
 
 class BaseGameEntity{
 private:

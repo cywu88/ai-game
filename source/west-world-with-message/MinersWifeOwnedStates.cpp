@@ -7,8 +7,8 @@
 //
 
 #include "MinersWifeOwnedStates.h"
-#include "./Time/CrudeTimer.h"
-#include "./misc/utils.h"
+#include "Time/CrudeTimer.h"
+#include "misc/utils.h"
 #include "Message/MessageDispatcher.h"
 #include "MessageType.h"
 #include "Debug.h"
@@ -70,7 +70,7 @@ DoHouseWork* DoHouseWork::getInstance()
 
 void DoHouseWork::Enter(MinersWife* wife)
 {
-	//cout << "\n" << GetNameOfEntity(wife->ID()) << ": Time to do some more housework!";
+	cout << "\n" << GetNameOfEntity(wife->ID()) << ": Time to do some more housework!";
 }
 
 
@@ -119,15 +119,15 @@ VisitBathroom* VisitBathroom::getInstance()
 
 void VisitBathroom::Enter(MinersWife* wife)
 {
-	//cout << "\n" << GetNameOfEntity(wife->ID()) << ": Walkin' to the can. Need to powda mah pretty li'lle nose";
+	cout << "\n" << GetNameOfEntity(wife->ID()) << ": Walkin' to the can. Need to powda mah pretty li'lle nose";
 }
 
 
 void VisitBathroom::Execute(MinersWife* wife)
 {
-	//cout << "\n" << GetNameOfEntity(wife->ID()) << ": Ahhhhhh! Sweet relief!";
+	cout << "\n" << GetNameOfEntity(wife->ID()) << ": Ahhhhhh! Sweet relief!";
 
-	//wife->GetFSM()->RevertToPreviousState();
+	wife->GetFSM()->RevertToPreviousState();
 }
 
 void VisitBathroom::Exit(MinersWife* wife)

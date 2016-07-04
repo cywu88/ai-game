@@ -13,9 +13,9 @@
  
 
 //#include "MinersWife.h"
-#include "./Message/Telegram.h"
+#include "Message/Telegram.h"
 
-#include "./FSM/State.h"
+#include "FSM/State.h"
 
 class MinersWife;
 

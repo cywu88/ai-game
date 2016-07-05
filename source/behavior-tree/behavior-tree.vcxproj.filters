@@ -27,7 +27,10 @@
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="behavior-tree.h">
+    <ClInclude Include="main.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="constants.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
